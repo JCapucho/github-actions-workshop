@@ -1,0 +1,9 @@
+name: Github action 101
+run-name: Github action do workshop do glua
+on: [push, workflow_dispatch]
+jobs:
+  cat-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: cat hello
