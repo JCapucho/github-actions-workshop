@@ -1,3 +1,5 @@
 *.pdf
 *.html
 /node_modules
+/vscode
+!/vscode/User/settings.json
