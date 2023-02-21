@@ -28,6 +28,8 @@ Orador: João Capucho
 
 <!--
 PREFLIGHT CHECKLIST:
+- Meter os repositórios a público
+TODO: Adicionar READMEs
 - Verificar todos os links a funcionar e abrir por ordem
 - Correr versão local do site react
 - Abrir um code por cada pasta
@@ -285,7 +287,6 @@ jobs:
 -- Mostrar site localmente
 -- Mostrar remoto a não funcionar
 -- (https://jcapucho.github.io/github-actions-workshop-react/)
--- TODO: Maybe qr code?
 
 -- (Mostrar build-only.yml)
 -- (https://github.com/JCapucho/github-actions-workshop-react/actions/runs/4178423332/jobs/7237198608)
@@ -377,7 +378,7 @@ minute (0-59),
 --- API escrito em Rust, linguagem compilada
 --- Demora um bocado a compilar
 --- Mostrar run sem caching
---- (https://github.com/JCapucho/github-actions-workshop-rust-/actions/runs/4218419085/jobs/7322917802)
+--- (https://github.com/JCapucho/github-actions-workshop-rust/actions/runs/4218419085/jobs/7322917802)
 -- Falar de caching
 --- Permite guardar dependências e a sua compilação para acelerar runs seguintes
 --- 3 maneiras de configurar:
@@ -387,19 +388,19 @@ minute (0-59),
     configurar de maneira mais simples para a linguagem a cache
 --- Actions da comunidade que implementam cache para setups comuns (usamos esta)
 -- Mostrar run com caching e cache
--- (https://github.com/JCapucho/github-actions-workshop-rust-/actions/runs/4234238314/jobs/7356253523)
+-- (https://github.com/JCapucho/github-actions-workshop-rust/actions/runs/4234238314/jobs/7356253523)
 -- Falar brevemente de limites (7 dias 10 GB)
 
 - "Matrix strategy, Outputs e Dependências":
 -- Mostrar o build.yml
 -- Explicar as partes novas
 --- Falar do jobs condicionais
---- (https://github.com/JCapucho/github-actions-workshop-rust-/actions/runs/4235006828) 
+--- (https://github.com/JCapucho/github-actions-workshop-rust/actions/runs/4235006828) 
 --- Falar do jobs condicionais, outputs e dependências
---- (https://github.com/JCapucho/github-actions-workshop-rust-/actions/runs/4235251786)
+--- (https://github.com/JCapucho/github-actions-workshop-rust/actions/runs/4235251786)
 --- Falar da matriz
 --- Falar de steps condicionais
---- (https://github.com/JCapucho/github-actions-workshop-rust-/actions/runs/4235006828/jobs/7358079136)
+--- (https://github.com/JCapucho/github-actions-workshop-rust/actions/runs/4235006828/jobs/7358079136)
 
 - "Correr workflows localmente"
 -- (https://github.com/nektos/act)
@@ -426,7 +427,7 @@ pre {
 - Correr todos os workflows com um event específico
 
 	```sh
-	$ act workflow_dispatch 
+	$ act workflow_dispatch
 	```
 
 - Correr um workflow específico

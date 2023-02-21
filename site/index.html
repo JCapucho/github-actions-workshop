@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/glua-logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <title>Glua github actions workshop 2022/2023</title>
+  </head>
+  <body>
+    <header>
+      <h1>CI/CD com Github actions</h1>
+      <p>Workshop do <a href="https://glua.ua.pt">GLUA</a> 2022/2023</p>
+    </header>
+
+    <h1>Repositórios</h1>
+    <ul>
+      <li>
+        <a href="https://github.com/JCapucho/github-actions-workshop-python">
+          Repositório com o código python
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/JCapucho/github-actions-workshop-react">
+          Repositório com o código react
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/JCapucho/github-actions-workshop-rust">
+          Repositório com o código rust
+        </a>
+      </li>
+    </ul>
+
+    <h1>Links utéis</h1>
+    <ul>
+      <li>
+        <a href="https://docs.github.com/en/actions">
+          Documentação das Github Actions
+        </a>
+      </li>
+      <li>
+        <a href="https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows">
+          Documentação dos events
+        </a>
+      </li>
+      <li>
+        <a href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions">
+          Documentação dos workflows
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/marketplace?type=actions">
+          Actions marketplace
+        </a>
+      </li>
+      <li>
+        <a href="https://crontab.guru">
+          Editor/Cheatsheet de cron syntax
+        </a>
+      </li>
+    </ul>
+
+    <h1>Ferramentas</h1>
+    <ul>
+      <li>
+        <a href="https://github.com/nektos/act">
+          Act (para correr workflows localmente)
+        </a>
+      </li>
+    </ul>
+
+    <h1>Actions usadas e outras utéis</h1>
+    <ul>
+      <li>
+        <a href="https://github.com/marketplace/actions/checkout">
+          Checkout
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/marketplace/actions/setup-python">
+          Setup Python
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/marketplace/actions/setup-node-js-environment">
+          Setup node
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/marketplace/actions/upload-github-pages-artifact">
+          Upload Github Pages artifact
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/marketplace/actions/deploy-github-pages-site">
+          Deploy GitHub Pages site
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/marketplace/actions/rust-toolchain">
+          Rust Toolchain
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/marketplace/actions/rust-cache">
+          Rust Cache
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/marketplace/actions/automatic-releases">
+          Automatic Releases
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/marketplace/actions/yet-another-upload-release-asset-action">
+          Upload Release Asset
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/marketplace/actions/dynamic-readme">
+          Dynamic Readme
+        </a>
+      </li>
+    </ul>
+
+
+    <h1>Snippets</h1>
+
+    <h4>Instalar dependências usando o <code>requirements.txt</code></h4>
+    <pre><code>pip freeze &#62; requirements.txt</code></pre>
+    <h4>Gravar as dependências no <code>requirements.txt</code></h4>
+    <pre><code>pip install -r requirements.txt</code></pre>
+
+    <h4>Correr todos os workflows localmente (<code>push</code> event)</h4>
+    <pre><code>act</code></pre>
+    <h4>Correr todos os workflows com um event específico</h4>
+    <pre><code>act workflow_dispatch</code></pre>
+    <h4>Correr um workflow específico</h4>
+    <pre><code>act -W .github/workflows/pipeline.yml</code></pre>
+
+  </body>
+</html>

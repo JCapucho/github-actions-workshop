@@ -45,6 +45,8 @@
           jdk
           yq-go
           nodejs
+          nodePackages.serve
+          nodePackages.vscode-langservers-extracted
 
           cargo-deny
           cargo-outdated
