@@ -3,10 +3,6 @@ theme: uncover
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
 
-<!--
-TODO: Setup OBS and VSCode
--->
-
 <style>
 :root {
 	--color-highlight-heading: #ff921e;
@@ -31,13 +27,15 @@ PREFLIGHT CHECKLIST:
 - Meter os repositórios a público
 - Verificar todos os links a funcionar e abrir por ordem
 - Correr versão local do site react
+- Mandar abaixo a github page do site react
 - Abrir um code por cada pasta
 - Começar OBS e verificar as sources e as scenes
-- https://support.mozilla.org/en-US/questions/1170143 Maybe?
-- Começar uma shell para o python com o venv carregado
+- Dar unmute ao microphone para gravar
+- Começar uma shell para o python com o venv carregado (possivelmente no code)
   ```
   source .venv/bin/activate
   ```
+- Pôr o OBS a gravar
 -->
 
 ---
@@ -78,7 +76,7 @@ Automatização da entrega do projeto
 
 <!--
 - CI/CD são práticas de automatizar processos da developer pipeline
-- CD permitir que o software seja distribuído mais frequentemente
+- CD permite que o software seja distribuído mais frequentemente
 - Deployment como especialização para live services
 - CI quer permitir que novas mudanças possam ser integradas no produto
   sempre que possível (Falar no merge day)
@@ -126,7 +124,7 @@ Automatização da entrega do projeto
 
 - Ficheiros de configuração para as github actions
 - Definidos no diretório `.github/workflows`
-- Escritos em YAML (extensão `.yml`)
+- Escritos em YAML (extensão `.yml` ou `.yaml`)
 
 <!--
 - Nome do ficheiro não importa desde que esteja dentro da pasta
@@ -154,6 +152,8 @@ jobs:
 - `run-name` nome de uma dada execução do workflow pode utilizar variaveis
 - `on` events (falar a seguir)
 - `jobs` jobs (falar a seguir)
+- Mostar que só isto basta para um workflow válido
+- (https://github.com/JCapucho/github-actions-workshop/actions/runs/4147655713/jobs/7174795128)
 -->
 
 ---
@@ -302,7 +302,6 @@ jobs:
 -- (https://github.com/JCapucho/github-actions-workshop-react/actions/runs/4178423332/jobs/7237198608)
 
 -- (Mostrar deploy-commented.yml)
--- (https://github.com/JCapucho/github-actions-workshop-react/actions/runs/4178820831/jobs/7238069164)
 
 -- Falar da existência do GITHUB_TOKEN
 --- Token unico criado para cada workflow
@@ -320,7 +319,7 @@ jobs:
 -- Falar do base url (vite.config.ts)
 
 - Perfil dinâmico
--- (https://github.com/JCapucho/JCapucho)
+-- (https://github.com/JCapucho/JCapucho/blob/master/README.md)
 -- Mostrar perfil inicial
 -- Fazer push das mudanças
 -- Falar do schedule event 
@@ -379,9 +378,25 @@ minute (0-59),
 -- Mostrar o evento `pull_request` (é simples!)
 -- Mostrar test PR
 -- (https://github.com/JCapucho/github-actions-workshop-react/pull/1)
--- Falar dos automatic checks (incluidos por defeito)
+-- Os workflows marcados com pull_request são corridos automaticamente
+   e mostrados no UI da pull request
+
+-- No entanto nada impede de dar merge no PR
+-- Mostrar faulty test PR
+-- (https://github.com/JCapucho/github-actions-workshop-react/pull/2)
+-- (Botão de merge aparece normalmente)
+
+-- Branch protections permitem configurar condições que previnem
+   os PRs de ser merged
+-- Settings>Branches
+-- Criar nova para master
+-- Falar de required reviewers e desativar
+-- Falar de "Require status checks to pass before merging"
+-- Ativar e escolher **job** (não workflow) `test`
+-- Mostar o faulty PR outra vez e como o botão está desativado
+
 -- Falar do auto merge (Settings > General > Allow auto-merge)
--- TODO: Adicionar imagem do auto-merge ao OBS
+-- Mostar o faulty PR e ativar auto-mege
 
 - "Caching entres execuções de workflows":
 -- Falar brevemente do projeto
