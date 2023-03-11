@@ -29,7 +29,6 @@ Orador: João Capucho
 <!--
 PREFLIGHT CHECKLIST:
 - Meter os repositórios a público
-TODO: Adicionar READMEs
 - Verificar todos os links a funcionar e abrir por ordem
 - Correr versão local do site react
 - Abrir um code por cada pasta
@@ -48,7 +47,10 @@ TODO: Adicionar READMEs
 ![bg right:30% 80%](assets/glua-logo.svg)
 
 <!--
-TODO: Get talking points
+- Promoção e divulgação de GNU/Linux e de software livre
+- Serviços de mirrors e apoio técnico
+- Eventos como a install party e o torneio de super tux
+- Workshops como este e o de git
 -->
 
 ---
@@ -80,8 +82,19 @@ Automatização da entrega do projeto
 - Deployment como especialização para live services
 - CI quer permitir que novas mudanças possam ser integradas no produto
   sempre que possível (Falar no merge day)
-TODO: Maybe add some git graphs (see mermaidjs) showing this
 -->
+
+---
+
+# Métodos tradicionais
+
+![](assets/merge-day-graph.svg)
+
+---
+
+# Integração contínua
+
+![](assets/ci-graph.svg)
 
 ---
 
@@ -90,10 +103,6 @@ TODO: Maybe add some git graphs (see mermaidjs) showing this
 - Testagem frequente do código
 - Entrega regular de funcionalidades e bugfixes
 - Aumento da produtividade
-
-<!--
-TODO: Maybe add some data about this
--->
 
 ---
 
@@ -267,6 +276,7 @@ jobs:
 - Python
 -- Mostrar aplicação e testes muito brevemente
 -- Mostrar requirements.txt
+-- Falar que ter dependencias loose em CI, é uma maneira de ter erros dificeis de dar debug
 -- Mostrar como instalar a partir dele
    ```
    pip install -r requirements.txt
