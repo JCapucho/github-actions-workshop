@@ -32,9 +32,12 @@
         shellHook = ''
           clear
 
-          export  PS1='\[\e[0;38;5;214m\][\[\e[0;38;5;214m\]CI/CD Glua\[\e[0;38;5;214m\]]\[\e[0m\] '
+          export ROOT="$(pwd)"
 
-          alias code="code --user-data-dir vscode"
+          export PS1='\[\e[0;38;5;214m\][\[\e[0;38;5;214m\]CI/CD Glua \[\e[0;92m\]~ $(pwd | sed "s@^$ROOT/\?@@")\[\e[0;38;5;214m\]]\[\e[0m\] '
+
+          alias code="code --user-data-dir $ROOT/vscode"
+          alias firefox="firefox -profile $ROOT/firefox"
 
           export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/podman/podman.sock
           alias act="act --bind --container-daemon-socket $XDG_RUNTIME_DIR/podman/podman.sock"

@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "marp slide-deck.md --preview --html",
-    "build": "marp slide-deck.md --pdf --html --allow-local-files"
+    "build": "marp slide-deck.md --html",
+    "build-pdf": "marp slide-deck.md --pdf --html --allow-local-files"
   },
   "devDependencies": {
     "@marp-team/marp-cli": "^2.3.0"
